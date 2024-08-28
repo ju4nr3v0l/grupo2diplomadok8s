@@ -14,7 +14,7 @@ spec:
         app: grupo2diplomado
     spec:
       containers:
-        - image: 'juamarulanda/grupo2diplomado:1.0'
+        - image: 'juanmarulanda/grupo2diplomado:1.0'
           name: grupo2diplomado
           ports:
             - containerPort: 3000
