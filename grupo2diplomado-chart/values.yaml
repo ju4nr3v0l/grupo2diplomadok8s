@@ -1,9 +1,0 @@
-image:
-  repository: juanmarulanda/grupo2diplomado
-  tag: "1.0"
-  pullPolicy: IfNotPresent
-
-service:
-  type: LoadBalancer
-  port: 80
-  targetPort: 3000
