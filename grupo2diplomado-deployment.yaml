@@ -2,9 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: grupo2diplomado
-  labels:
-    app: grupo2diplomado
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: grupo2diplomado
@@ -14,23 +13,8 @@ spec:
         app: grupo2diplomado
     spec:
       containers:
-        - image: 'juanmarulanda/grupo2diplomado:1.0'
-          name: grupo2diplomado
+        - name: grupo2diplomado
+          image: juanmarulanda/grupo2diplomado:1.0
           ports:
             - containerPort: 3000
-          resources:
-            requests:
-              cpu: "170m"
-              memory: "500Mi"
-            limits:
-              cpu: "800m"
-              memory: "1Gi"
-          startupProbe:
-            httpGet:
-              path: /
-              port: 3000
-            initialDelaySeconds: 26
-          readinessProbe:
-            httpGet:
-              path: /
-              port: 3000
+
