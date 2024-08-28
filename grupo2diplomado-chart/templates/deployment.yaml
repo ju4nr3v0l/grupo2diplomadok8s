@@ -12,9 +12,8 @@ spec:
       labels:
         app: grupo2diplomado
     spec:
-      containers:
-        - name: grupo2diplomado
-          image: juanmarulanda/grupo2diplomado:1.1
+        containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           ports:
             - containerPort: 3000
-
