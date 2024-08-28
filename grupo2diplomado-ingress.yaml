@@ -14,5 +14,5 @@ spec:
                 name: grupo2diplomado
                 port:
                   number: 80
-            path: /app(/|$)(.*)
+            path: /app(/|$)(.*) # esto es el prefijo de la url que lo redirige al namespace requerido.
             pathType: ImplementationSpecific
