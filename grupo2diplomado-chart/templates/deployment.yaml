@@ -15,7 +15,7 @@ spec:
         app: api
     spec:
       containers:
-        - image:  "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        - image:  'juanmarulanda/grupo2diplomado:1.0'
           name: grupo2diplomado
           ports:
             - containerPort: 3000
