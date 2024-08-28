@@ -5,7 +5,8 @@ metadata:
 spec:
   type: ClusterIP  # Cambiado a ClusterIP para trabajar con Ingress
   ports:
-    - port: 3000  # El puerto que expone el Service internamente
+    - port: 80  # El puerto que expone el Service internamente
       targetPort: 3000  # El puerto en el contenedor
+      protocol: TCP # El protocolo de comunicacion
   selector:
     app: grupo2diplomado
