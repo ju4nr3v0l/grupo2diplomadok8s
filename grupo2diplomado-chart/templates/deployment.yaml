@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: api
+  name: grupo2diplomado-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+        - image:  "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          name: grupo2diplomado
+          ports:
+            - containerPort: 3000
+          startupProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 45
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            periodSeconds: 5
+          resources:
+            requests:
+              memory: "400Mi"
+              cpu: "400m"
+            limits:
+              memory: "800Mi"
+              cpu: "800m"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-service
+spec:
+  selector:
+    app: api
+  ports:
+    - protocol: "TCP"
+      port: 80
+      targetPort: 3000
+  type: ClusterIP
