@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: grupo2diplomado
-          image: juanmarulanda/grupo2diplomado:1.0
+          image: juanmarulanda/grupo2diplomado:1.1
           ports:
             - containerPort: 3000
 
