@@ -14,5 +14,5 @@ spec:
                 name: grupo2diplomado
                 port:
                   number: 80
-            path: /(/|$)(.*)
+            path: /app(/|$)(.*)
             pathType: ImplementationSpecific
