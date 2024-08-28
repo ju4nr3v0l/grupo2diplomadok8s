@@ -9,3 +9,7 @@ image:
   name: grupo2diplomado
   # Overrides the image tag whose default is the chart appVersion.
   tag: "1.1"
+
+service:
+    type: ClusterIP
+    port: 80
