@@ -8,7 +8,7 @@ image:
   repository: juanmarulanda/grupo2diplomado
   name: grupo2diplomado
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 1.10
+  tag: 1.11
 
 service:
     type: ClusterIP
