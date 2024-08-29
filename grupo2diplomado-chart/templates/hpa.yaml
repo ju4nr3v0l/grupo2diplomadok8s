@@ -7,8 +7,8 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: grupo2diplomado
-  minReplicas: 1 # Definimos 2, para tener buena disponibilidad y a los pods le colocamos los recursos necesarios para atender el horario valle
-  maxReplicas: 2 # Particularidades del negocio, en cuantos X crece en un pico
+  minReplicas: 2 # Definimos 2, para tener buena disponibilidad y a los pods le colocamos los recursos necesarios para atender el horario valle
+  maxReplicas: 3 # Particularidades del negocio, en cuantos X crece en un pico
   metrics:
     - type: Resource
       resource:
